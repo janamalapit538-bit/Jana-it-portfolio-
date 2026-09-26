@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Jana Patricia</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <div class="logo">Jana Patricia</div>
+    <nav aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="ethics.html">Ethics</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+<main>
+    <h1 class="page-title">Contact / Feedback</h1>
+    <p>If you would like to leave a message or feedback, use the form below.</p>
+
+    <form onsubmit="showMessage(event)">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" required></textarea>
+
+        <button type="submit">Send Message</button>
+        <p id="form-message" class="note" hidden>
+            Thank you! This demo form does not send or store your information.
+        </p>
+    </form>
+</main>
+
+<footer>
+    <p>&copy; 2026 Jana Patricia. Student IT Portfolio.</p>
+</footer>
+
+<script>
+function showMessage(event) {
+    event.preventDefault();
+    document.getElementById("form-message").hidden = false;
+}
+</script>
+</body>
+</html>
